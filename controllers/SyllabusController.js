@@ -199,16 +199,16 @@ exports.syllabusUpdate = [
                 return apiResponse.ErrorResponse(res, err);
               } else {
                 let syllabusData = new SyllabusData(syllabus);
-                fs.writeFileSync(
-                  "./files/asset/" + syllabusName + ".pdf", 
-                  req.body.syllabusBase64.split(',')[1],
-                  "base64"
-                ); 
-                 fs.writeFileSync(
-                  "./files/asset/" + testPlanName + ".pdf",
-                  req.body.testPlanBase64.split(',')[1],
-                  "base64"
-                );
+                // fs.writeFileSync(
+                //   "./files/asset/" + syllabusName + ".pdf", 
+                //   req.body.syllabusBase64.split(',')[1],
+                //   "base64"
+                // ); 
+                //  fs.writeFileSync(
+                //   "./files/asset/" + testPlanName + ".pdf",
+                //   req.body.testPlanBase64.split(',')[1],
+                //   "base64"
+                // );
                 return apiResponse.successResponseWithData(
                   res,
                   "Syllabus update Success.",
